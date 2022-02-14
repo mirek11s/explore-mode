@@ -1,0 +1,1 @@
+export const TRENDING_SONGS = 'https://audius-discovery-3.altego.net/v1/tracks/trending?app_name=ArtBerry'
