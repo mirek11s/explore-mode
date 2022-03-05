@@ -1,47 +1,52 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Thumbs, Controller } from "swiper";
+import { getTrending } from "../Redux/reducer/explorer";
 import ReactPlayer from "react-player";
 import "swiper/swiper-bundle.css";
-import axios from "axios";
-import { TRENDING_SONGS } from "./constants";
+import {data} from './data';
 
 SwiperCore.use([Navigation, Pagination, Thumbs, Controller]);
 
 const ExploreMode = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const dispatch = useDispatch();
   const [showArtist, setShowArtist] = useState(false);
-  const [TrendingMusicData, setTrendingMusicData] = useState({});
-
-  async function getTrendingSong() {
-    try {
-      const url = TRENDING_SONGS;
-      const response = await axios.get(url);
-      const data = response.data
-      setTrendingMusicData(data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
 
   useEffect(() => {
-    getTrendingSong();
-  }, []);
+    dispatch(getTrending());
+  }, [dispatch]);
 
-  console.log(TrendingMusicData);
+  //REDUX WAY OF CAPTURING DATA PT1
+  //taking the object data from the explorer reducer
+  // const trendingSongsData = useSelector((state) => state.data.data);
+  // console.log(trendingSongsData);
+
+  //REDUX WAY OF CAPTURING DATA PT2
+  // if (trendingSongsData !== undefined) {
+  //   for (const key in trendingSongsData.data) {
+  //     //pushing the IDs from the API to an arrays
+  //     musicIds.push(trendingSongsData.data[key].id);
+  //   }
+  // }
 
   const slides = [];
-  const myMusicArray = ["xwj82WszDjg", "CpKSDUjksIA"];
 
-  let MusicArrayLength = myMusicArray.length;
+  const getUrl = (data) => {
+    return data.url
+  }
+
+  const musicURLs = data.map(getUrl);
+
+  let MusicArrayLength = musicURLs.length;
 
   for (let i = 0; i < MusicArrayLength; i++) {
     slides.push(
-      <SwiperSlide key={`${i}`} tag="li">
+      <SwiperSlide key={`${i}`} tag='li'>
         <ReactPlayer
-          url={`https://discovery.grassfed.network/v1/tracks/D7KyD/stream?app_name=Artberry`}
-          playing={true}
-          volume={0.8}
+          url={musicURLs}
+          playing={false}
+          volume={0.0}
           controls
         />
       </SwiperSlide>
@@ -52,7 +57,6 @@ const ExploreMode = () => {
     <>
       <Swiper
         id="main"
-        thumbs={{ swiper: thumbsSwiper }}
         // controller={{ control: controlledSwiper }}
         tag="section"
         wrapperTag="ul"
