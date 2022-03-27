@@ -1,0 +1,17 @@
+.container {
+  height: calc(100vh - 80px);
+  background: #f4f4ff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container h1 {
+  padding: 1.5rem 2.5rem;
+  background: linear-gradient(220deg, #a2a2f6, rgba(162, 162, 246, 0.5));
+  border-radius: 12px calc(12px * 10);
+}
+/*# sourceMappingURL=Layout.module.css.map */

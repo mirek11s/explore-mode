@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {TRENDING_SONGS} from '../../../components/constants'
+import {TRENDING_SONGS} from '../../../components/ExploreMode/constants'
 
 
 //simple api request

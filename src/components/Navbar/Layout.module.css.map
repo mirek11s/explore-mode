@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,UAAU,CAAC;EACP,MAAM,EAAE,kBAA8B;EACtC,UAAU,ECET,OAAkB;EDDnB,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;CAOtB;;AAXD,AAMI,UANM,CAMN,EAAE,CAAC;EACC,OAAO,EAAE,aAAa;EACtB,UAAU,EAAE,0DAAsD;EAClE,aAAa,ECEN,IAAI,CDFkB,eAA2B;CAC3D",
+    "sources": [
+        "Layout.module.scss",
+        "../../scss/abstracts/_variables.scss"
+    ],
+    "names": [],
+    "file": "Layout.module.css"
+}
