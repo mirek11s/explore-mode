@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import {BsFillArrowRightSquareFill} from 'react-icons/bs';
 import {AiOutlineClose} from 'react-icons/ai';
 import { SidebarData } from './SidebarData';
-import './Sidebar.scss';
 import { IconContext } from 'react-icons';
 
 const Sidebar = () => {

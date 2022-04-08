@@ -1,18 +1,28 @@
-
 // .btn-default {
-//     animation: $name $duration $timeFunction;
-//   @keyframes #{$name} {
-//     0% {
-//       opacity: 0;
-//       transform: translateY($translate1);
-//     }
-//     50% {
-//       opacity: 0;
-//       transform: translateY($translate2);
-//     }
-//     100% {
-//       opacity: 1;
-//       transform: translateY($translate3);
-//     }
-//   }}
+//   background-color: white;
+//   color: rgb(0, 0, 0);
+//   text-decoration: none;
 
+//   //this way the element works as a normal block element
+//   display: inline-block;
+//   font-weight: bold;
+//   border-radius: 0;
+//   position: relative;
+//   font-size: 18px;
+//   cursor: pointer;
+
+//   border: 6px solid #060b26;
+
+//   padding: 10px 16px;
+//   transition: all 0.2s;
+
+//   &:hover {
+//     color: rgb(0, 0, 0);
+//     border-color: rgba(92, 1, 28, 0.8);
+//     box-shadow: 1px 2px #060b26;
+//   }
+
+//   &:active {
+//     transform: translateY(0.3rem);
+//   }
+// }
