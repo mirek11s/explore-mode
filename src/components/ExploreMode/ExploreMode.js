@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Pagination, Thumbs, Controller } from "swiper";
@@ -40,7 +40,6 @@ const ExploreMode = () => {
       const bufferLength = analyser.frequencyBinCount;
       const dataArray = new Uint8Array(bufferLength);
 
-      //   const barWidth = canvas.width / 2 / bufferLength;
       const barWidth = 2;
       let barHeight;
       let x;
