@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar/Sidebar';
 import Login from '../components/Auth/Login';
 
 const code = new URLSearchParams(window.location.search).get('code')
-console.log(code)
+// console.log(code)
 
 const Home = () => {
   return (
