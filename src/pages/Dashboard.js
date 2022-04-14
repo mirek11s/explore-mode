@@ -16,9 +16,6 @@ const Dashboard = ({ code }) => {
     const [searchResults, setSearchResults] = useState([])
     const [playingTrack, setPlayingTrack] = useState()
 
-    console.log('ssss', playingTrack)
-
-
     const chooseTrack = (track) => {
         setPlayingTrack(track)
         setSearch('')
